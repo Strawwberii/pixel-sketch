@@ -1,0 +1,24 @@
+.grids{
+    display: flex;
+    background-color: brown;
+    border: 10px;
+    border-color: aliceblue;
+}
+#sketchpad{
+    display: flex;
+    width: 960px;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+#buttons{
+    display: flex;
+    flex-direction: column;
+}
+#grandparent{
+    display: flex;
+}
+#header{
+    display: flex;
+    justify-content: center;
+}

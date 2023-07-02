@@ -1,15 +1,19 @@
 //global variables
 
 let sketchpad = document.getElementById("sketchpad");
+let slider = document.getElementById("slider");
+let value = slider.value;
+let sliderValue = document.getElementById('sliderValue');
+
 
 // create sketchpad grid
 
-sketchpad.style.gridTemplateColumns = 'repeat(16, 1fr)';
-sketchpad.style.gridTemplateRows = 'repeat(16, 1fr)';
+function sketchGrid(){
 
-function sketchGrid(noOfGrids){
+    sketchpad.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
+    sketchpad.style.gridTemplateRows = `repeat(${value}, 1fr)`;
 
-    for(i=0;i<noOfGrids;i++){
+    for(i=0;i<(value*value);i++){
 
         const grids = document.createElement("div");
         grids.className  = 'grids';
@@ -17,10 +21,16 @@ function sketchGrid(noOfGrids){
         sketchpad.append(grids);
     }
     
+    
 }
 
-sketchGrid(256);
+sketchGrid();
 
-sketchpad.addEventListener('mouseover', function(){
-    
-})
+// change slider value
+function changeSliderValue(value){
+    sliderValue.textContent = `${value} x ${value}`;
+}
+changeSliderValue(value);
+
+// change color when 
+

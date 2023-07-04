@@ -17,22 +17,24 @@ function sketchGrid(value){
 
         let grids = document.createElement("div");
         grids.className  = 'grids';
-        grids.innerText = 'a';
+        grids.innerText = 'div';
         sketchpad.append(grids);
+        
+        // change color on hover
+        grids.addEventListener('mouseover', function(){
+            grids.style.backgroundColor = 'blue';
+        });
     }
     
     
 }
 
-
-
 // change grid's size
 
 function changeGridSize(input){
-    sketchGrid(input)
-}
+    sketchGrid(input);
+};
+changeGridSize(input);
 
-changeGridSize(value);
-
-// change color when 
+// show sliderValue on screen
 

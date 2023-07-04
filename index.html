@@ -17,8 +17,8 @@
             <input type="button" value="rainbowMode" class="btn" id="rainbowbtn">
             <input type="button" value="eraser" class="btn" id="eraserbtn">
             <input type="button" value="clear" class="btn" id="clearbtn">
-            <input type="range" min="1" max="64" id="slider" value="16">
-            <label for="slider">16x16</label>
+            <input type="range" min="1" max="64" id="slider" value="16" onchange="changeGridSize(this.value)">
+            <div id="sliderValue">16x16</div>
             
         </div>
         <div id="sketchpad">

@@ -8,14 +8,14 @@ let sliderValue = document.getElementById('sliderValue');
 
 // create sketchpad grid
 
-function sketchGrid(){
+function sketchGrid(value){
 
     sketchpad.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
     sketchpad.style.gridTemplateRows = `repeat(${value}, 1fr)`;
 
     for(i=0;i<(value*value);i++){
 
-        const grids = document.createElement("div");
+        let grids = document.createElement("div");
         grids.className  = 'grids';
         grids.innerText = 'a';
         sketchpad.append(grids);
@@ -24,13 +24,15 @@ function sketchGrid(){
     
 }
 
-sketchGrid();
 
-// change slider value
-function changeSliderValue(value){
-    sliderValue.textContent = `${value} x ${value}`;
+
+// change grid's size
+
+function changeGridSize(input){
+    sketchGrid(input)
 }
-changeSliderValue(value);
+
+changeGridSize(value);
 
 // change color when 
 

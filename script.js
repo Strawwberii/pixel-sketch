@@ -7,6 +7,7 @@ let slider = document.getElementById("slider");
 let value = slider.value;
 let sliderValue = document.getElementById('sliderValue');
 let color = 'black';
+let randomcolor = '';
 let colorChoose = document.getElementById('colorChoose');
 let original = document.getElementById('original');
 let rainbowBtn = document.getElementById('rainbowbtn');
@@ -48,7 +49,12 @@ function changeColor(colorChoice){
 //function to apply changeColor
 
 function changeDivColor(){
+    if(color === 'random'){
+        this.style.backgroundColor= `hsl(${Math.random() * 360}, 100%, 50%)`;
+    }
+    else{
     this.style.backgroundColor = color;
+    }
 }
 
 // make user choose color using color input
@@ -69,10 +75,7 @@ eraserBtn.addEventListener('click', function(){
 // rainbow button
 
 rainbowBtn.addEventListener('click', function(){
-    let n = (Math.random() * 0xfffff * 1000000).toString(16);
-    let randomcolor = '#' + n.slice(0, 6);
-    console.log(randomcolor);
-    changeColor(randomcolor);
+    changeColor('random');
 })
 // clear button
 

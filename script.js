@@ -51,6 +51,7 @@ function changeColor(colorChoice){
 
 // adding changeColor function to all the buttons
 
+
 original.addEventListener('click', function(){
     changeColor('black');
 });
@@ -66,6 +67,13 @@ function clearGrid(){
     let gridSquares = sketchpad.querySelectorAll('div');
     gridSquares.forEach((div) => div.style.backgroundColor = 'wheat');
 };
+
 clearBtn.addEventListener('click', function(){
     clearGrid();
 });
+
+// change slider value
+
+function sliderValueFunction(inputvalue){
+    sliderValue.textContent = `${inputvalue} x ${inputvalue}`;
+}

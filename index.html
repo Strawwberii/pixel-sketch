@@ -12,14 +12,18 @@
     <div id="grandparent">
         
         <div id="buttons">
-            <input type="color" id="colorChoose" value="" >
-            <label for="colorChoose">Pick Color</label>
+            <div id="colorChooseWrapper">
+                <input type="color" id="colorChoose" >
+                <label for="colorChoose">Pick Color</label>
+            </div>
             <input type="button" value="original" class="btn" id="original">
-            <input type="button" value="rainbowMode" class="btn" id="rainbowbtn">
+            <input type="button" value="rainbow" class="btn" id="rainbowbtn">
             <input type="button" value="eraser" class="btn" id="eraserbtn">
             <input type="button" value="clear" class="btn" id="clearbtn">
-            <input type="range" min="1" max="64" id="slider" value="16" onchange="changeGridSize(this.value)">
-            <div id="sliderValue">16x16</div>
+            <div id="sliderWrapper">
+                <input type="range" min="1" max="64" id="slider" value="16"  onchange="changeGridSize(this.value); sliderValueFunction(this.value)">
+                <div id="sliderValue">16x16</div>
+            </div>
             
         </div>
         <div id="sketchpad">

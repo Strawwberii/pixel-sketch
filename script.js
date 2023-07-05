@@ -70,7 +70,7 @@ original.addEventListener('click', function(){
     changeColor('black');
 });
 eraserBtn.addEventListener('click', function(){
-    changeColor('wheat');
+    changeColor('#F5F5F5');
 });
 
 // rainbow button
@@ -82,7 +82,7 @@ rainbowBtn.addEventListener('click', function(){
 
 function clearGrid(){
     let gridSquares = sketchpad.querySelectorAll('div');
-    gridSquares.forEach((div) => div.style.backgroundColor = 'wheat');
+    gridSquares.forEach((div) => div.style.backgroundColor = '#F5F5F5');
 };
 
 clearBtn.addEventListener('click', function(){

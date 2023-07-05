@@ -1,6 +1,7 @@
 //global variables
 
 let sketchpad = document.getElementById("sketchpad");
+let gridSquares = sketchpad.querySelectorAll('div');
 let clearBtn = document.getElementById("clearbtn");
 let slider = document.getElementById("slider");
 let value = slider.value;
@@ -19,7 +20,7 @@ function sketchGrid(value){
 
     sketchpad.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
     sketchpad.style.gridTemplateRows = `repeat(${value}, 1fr)`;
-    let gridSquares = sketchpad.querySelectorAll('div');
+    
     gridSquares.forEach((div) => div.remove());
     for(i=0;i<(value*value);i++){
 
@@ -57,4 +58,14 @@ original.addEventListener('click', function(){
 
 eraserBtn.addEventListener('click', function(){
     changeColor('wheat');
+});
+
+// clear button
+
+function clearGrid(){
+    let gridSquares = sketchpad.querySelectorAll('div');
+    gridSquares.forEach((div) => div.style.backgroundColor = 'wheat');
+};
+clearBtn.addEventListener('click', function(){
+    clearGrid();
 });

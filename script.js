@@ -63,6 +63,7 @@ colorChoose.addEventListener('change', function(event){
     color = event.target.value;
     changeColor(color);
 })
+
 // adding changeColor function to original and eraserbtn
 
 original.addEventListener('click', function(){

@@ -12,8 +12,6 @@ let original = document.getElementById('original');
 let rainbowBtn = document.getElementById('rainbowbtn');
 let eraserBtn = document.getElementById('eraserbtn');
 
-
-
 // create sketchpad grid
 
 function sketchGrid(value){
@@ -30,9 +28,7 @@ function sketchGrid(value){
 
         // change color on hover
 
-        grids.addEventListener('mouseover', function(){
-            grids.style.backgroundColor = color;
-        });
+        grids.addEventListener('mouseover', changeDivColor);
     } 
     console.log(value);
 }
@@ -43,24 +39,41 @@ function changeGridSize(input){
     sketchGrid(input);
 };
 
-// function to change color of mouseover
+// function to changeColor
 
 function changeColor(colorChoice){
     color = colorChoice;
 }
 
-// adding changeColor function to all the buttons
+//function to apply changeColor
 
+function changeDivColor(){
+    this.style.backgroundColor = color;
+}
+
+// make user choose color using color input
+
+colorChoose.addEventListener('change', function(event){
+    color = event.target.value;
+    changeColor(color);
+})
+// adding changeColor function to original and eraserbtn
 
 original.addEventListener('click', function(){
     changeColor('black');
 });
-
-
 eraserBtn.addEventListener('click', function(){
     changeColor('wheat');
 });
 
+// rainbow button
+
+rainbowBtn.addEventListener('click', function(){
+    let n = (Math.random() * 0xfffff * 1000000).toString(16);
+    let randomcolor = '#' + n.slice(0, 6);
+    console.log(randomcolor);
+    changeColor(randomcolor);
+})
 // clear button
 
 function clearGrid(){

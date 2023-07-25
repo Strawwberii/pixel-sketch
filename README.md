@@ -1,2 +1,3 @@
 # pixel-sketch
-Etch a sketch project 
+A simple sketch board that allows you to draw 
+pixelated patterns. 

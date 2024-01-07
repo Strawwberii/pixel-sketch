@@ -12,31 +12,32 @@
       <h2 id="header">Pixel Sketch</h2>
     </header>
     <main>
-      <div id="grandparent">
-        <div id="buttons">
-          <div id="colorChooseWrapper">
-            <input type="color" id="colorChoose" />
-            <label for="colorChoose">Pick Color</label>
-          </div>
-          <input type="button" value="original" class="btn" id="original" />
-          <input type="button" value="rainbow" class="btn" id="rainbowbtn" />
-          <input type="button" value="eraser" class="btn" id="eraserbtn" />
-          <input type="button" value="clear" class="btn" id="clearbtn" />
-          <div id="sliderWrapper">
-            <input
-              type="range"
-              min="1"
-              max="64"
-              id="slider"
-              value="16"
-              onchange="changeGridSize(this.value); sliderValueFunction(this.value)"
-            />
-            <div id="sliderValue">16x16</div>
-          </div>
+      <div id="buttons">
+        <div id="colorChooseWrapper">
+          <input type="color" id="colorChoose" />
+          <label for="colorChoose">Pick Color</label>
         </div>
-        <div id="sketchpad"></div>
+        <input type="button" value="original" class="btn" id="original" />
+        <input type="button" value="rainbow" class="btn" id="rainbowbtn" />
+        <input type="button" value="eraser" class="btn" id="eraserbtn" />
+        <input type="button" value="clear" class="btn" id="clearbtn" />
+        <div id="sliderWrapper">
+          <input
+            type="range"
+            min="1"
+            max="64"
+            id="slider"
+            value="16"
+            onchange="changeGridSize(this.value); sliderValueFunction(this.value)"
+          />
+          <div id="sliderValue">16x16</div>
+        </div>
       </div>
+      <div id="sketchpad"></div>
     </main>
-    <footer></footer>
+    <footer>
+      <h2>Rupok Adin ©</h2>
+      <a href="https://github.com/rupokghosh/pixel-sketch">code</a>
+    </footer>
   </body>
 </html>
